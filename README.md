@@ -3,19 +3,19 @@ elli_demo
 
 Demo of Elli webserver for Sydney Erlang User Group 
 
-Prerequisites: erlang, rebar
+* **How to compile and execute**:
 
-How to compile:
+  - Prerequisites: erlang, rebar
 
-Get dependencies:
+  - Get dependencies:
 
     rebar get-deps
 
-Compile:
+  - Compile:
 
     rebar compile
 
-Execute in main project folder:
+  - Execute in main project folder:
 
     erl -pa ebin src deps/*/ebin -s elli_demo
 
@@ -24,30 +24,30 @@ or
     ./start.sh
 
 
-Available pages
+* **Available pages**:
 
-Static content:
+  - Static content:
 
     http://localhost:3000/static/welcome.html
 
-Protected - not authorised:
+  - Protected - not authorised:
 
     http://localhost:3000/static/protected/welcome.html
 
-Protected - authorised (Chromium syntax for passing username and password):
+  - Protected - authorised (Chromium syntax for passing username and password):
 
     admin:secret@http://localhost:3000/static/protected/welcome.html
 
-Dynamic content handled by elli_demo_handler module:
+  - Dynamic content handled by elli_demo_handler module:
 
     http://localhost:3000/hello
     http://localhost:3000/hello/world
 
-Protected dynamic (replace * with any combination of words / path): 
+  - Protected dynamic (replace * with any combination of words / path): 
     
-    /protected/*
+    http://localhost:3000/protected/*
 
-Example of elli_stats module:
+  - Example of elli_stats module:
 
     http://localhost:3000/elli/stats
 
@@ -56,7 +56,7 @@ Open a terminal and run ./generate.sh
 It will run 6000 requests in a loop, watch browser for real-time statistics.
 
 
-Cheat sheet:
+* **Cheat sheet**:
 
 Compile modified handles without restarting server:
 
