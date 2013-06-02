@@ -15,19 +15,19 @@ Demo of Elli webserver for Sydney Erlang User Group
 
   - Compile:
 
-    ```erlang
+    ```
     rebar compile
     ```
 
   - Execute in main project folder:
 
-    ```erlang
+    ```
     erl -pa ebin src deps/*/ebin -s elli_demo
     ```
 
     or 
 
-    ```erlang
+    ```
     ./start.sh
     ```
 
@@ -48,24 +48,34 @@ Demo of Elli webserver for Sydney Erlang User Group
 
   - Protected - authorised (Chromium syntax for passing username and password):
 
+    ```
     admin:secret@http://localhost:3000/static/protected/welcome.html
+    ```
 
   - Dynamic content handled by elli_demo_handler module:
 
+    ```
     http://localhost:3000/hello
     http://localhost:3000/hello/world
+    ```
 
   - Protected dynamic (replace * with any combination of words / path): 
     
+    ```
     http://localhost:3000/protected/*
+    ```
 
   - Example of elli_stats module:
 
+    ```
     http://localhost:3000/elli/stats
+    ```
 
     Open a terminal and run 
     
+    ```
     ./generate.sh
+    ```
 
     It will run 6000 requests in a loop, watch browser for real-time statistics.
 
@@ -74,13 +84,17 @@ Demo of Elli webserver for Sydney Erlang User Group
 
 Compile modified handles without restarting server:
 
+    ```erlang
     c("src/elli_demo_handler.erl", [{outdir,"ebin/"}]).
+    ```
 
 Debug the handler - start debugger, load demo_handler module and add break point to handle first function:
 
+    ```erlang
     debugger:start().
     ii(elli_demo_handler).
     ib(elli_demo_handler, handle, 2).
+    ```
 
 Enjoy!
 
