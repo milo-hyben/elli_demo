@@ -9,26 +9,36 @@ Demo of Elli webserver for Sydney Erlang User Group
 
   - Get dependencies:
 
-    rebar get-deps
+    ```erlang
+	rebar get-deps
+    ```
 
   - Compile:
 
+    ```erlang
     rebar compile
+    ```
 
   - Execute in main project folder:
 
+    ```erlang
     erl -pa ebin src deps/*/ebin -s elli_demo
+    ```
 
-or 
+    or 
 
+    ```erlang
     ./start.sh
+    ```
 
 
 * **Available pages**:
 
   - Static content:
 
+    ```erlang
     http://localhost:3000/static/welcome.html
+    ```
 
   - Protected - not authorised:
 
@@ -51,9 +61,11 @@ or
 
     http://localhost:3000/elli/stats
 
-Open a terminal and run ./generate.sh
+    Open a terminal and run 
+    
+    ./generate.sh
 
-It will run 6000 requests in a loop, watch browser for real-time statistics.
+    It will run 6000 requests in a loop, watch browser for real-time statistics.
 
 
 * **Cheat sheet**:
