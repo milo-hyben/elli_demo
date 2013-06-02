@@ -9,46 +9,47 @@ How to compile:
 
 Get dependencies:
 
-rebar get-deps
+    rebar get-deps
 
 Compile:
 
-rebar compile
+    rebar compile
 
 Execute in main project folder:
 
-erl -pa ebin src deps/*/ebin -s elli_demo
+    erl -pa ebin src deps/*/ebin -s elli_demo
 
 or 
 
-./start.sh
+    ./start.sh
 
 
 Available pages
 
 Static content:
 
-http://localhost:3000/static/welcome.html
+    http://localhost:3000/static/welcome.html
 
 Protected - not authorised:
 
-http://localhost:3000/static/protected/welcome.html
+    http://localhost:3000/static/protected/welcome.html
 
 Protected - authorised (Chromium syntax for passing username and password):
 
-admin:secret@http://localhost:3000/static/protected/welcome.html
+    admin:secret@http://localhost:3000/static/protected/welcome.html
 
 Dynamic content handled by elli_demo_handler module:
 
-http://localhost:3000/hello
-http://localhost:3000/hello/world
+    http://localhost:3000/hello
+    http://localhost:3000/hello/world
 
 Protected dynamic (replace * with any combination of words / path): 
-/protected/*
+    
+    /protected/*
 
 Example of elli_stats module:
 
-http://localhost:3000/elli/stats
+    http://localhost:3000/elli/stats
 
 Open a terminal and run ./generate.sh
 
@@ -59,13 +60,13 @@ Cheat sheet:
 
 Compile modified handles without restarting server:
 
-c("src/elli_demo_handler.erl", [{outdir,"ebin/"}]).
+    c("src/elli_demo_handler.erl", [{outdir,"ebin/"}]).
 
 Debug the handler - start debugger, load demo_handler module and add break point to handle first function:
 
-debugger:start().
-ii(elli_demo_handler).
-ib(elli_demo_handler, handle, 2).
+    debugger:start().
+    ii(elli_demo_handler).
+    ib(elli_demo_handler, handle, 2).
 
 Enjoy!
 
