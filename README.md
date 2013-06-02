@@ -84,17 +84,13 @@ Demo of Elli webserver for Sydney Erlang User Group
 
 Compile modified handles without restarting server:
 
-    ```erlang
     c("src/elli_demo_handler.erl", [{outdir,"ebin/"}]).
-    ```
 
 Debug the handler - start debugger, load demo_handler module and add break point to handle first function:
 
-    ```erlang
     debugger:start().
     ii(elli_demo_handler).
     ib(elli_demo_handler, handle, 2).
-    ```
 
 Enjoy!
 
