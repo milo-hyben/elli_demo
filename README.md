@@ -9,7 +9,7 @@ Demo of Elli webserver for Sydney Erlang User Group
 
   - Get dependencies:
 
-    ```erlang
+    ```
 	rebar get-deps
     ```
 
@@ -36,13 +36,15 @@ Demo of Elli webserver for Sydney Erlang User Group
 
   - Static content:
 
-    ```erlang
+    ```
     http://localhost:3000/static/welcome.html
     ```
 
   - Protected - not authorised:
 
+    ```
     http://localhost:3000/static/protected/welcome.html
+    ```
 
   - Protected - authorised (Chromium syntax for passing username and password):
 
