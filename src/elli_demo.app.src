@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, elli_demo, [
+	{description, "Elli demo application."},
+	{vsn, "0.0.1"},
+	{modules, []},
+	{registered, []},
+	{applications, [
+		kernel,
+		stdlib,
+		crypto,
+		public_key,
+		ssl,
+		elli
+	]},
+	{mod, {elli_demo_app, []}},
+	{env, []},
+  {app, observer, [{incl_cond, include}]}
+]}.
